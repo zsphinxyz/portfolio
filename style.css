@@ -202,6 +202,9 @@ body{
     color: #aaa;
     padding: 10px 0 0 25px;
 }
+.c4 .imgs .img{
+    width: 200px;
+}
 
 .c1{
     background: #151515;
@@ -316,7 +319,7 @@ footer{
     position: relative;
 }
 
-#cancel, #info{
+#cancel, #info, #next, #prev{
     user-select: none;
     color: #000;
     font-size: 24px;
@@ -331,13 +334,17 @@ footer{
     border-radius: 50%;
     transition: 100ms ease-in;
 }
-#cancel:hover,#info:hover{
+#cancel:hover,#info:hover, #next:hover, #prev:hover{
     cursor: pointer;
     color: #fff;
     background: #222;
 }
-#info{
+#info, #prev{
     left: -22px;
+}
+#next, #prev{
+    position: absolute;
+    top: 50%;
 }
 
 .info_text{

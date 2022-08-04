@@ -8,16 +8,30 @@ $("#cancel").click(function(){
     $('.info_text').empty();
 });
 
-
-var alt;
+let all_imgs = $('.img')
+let current;
+let alt;
 
     // click img pop up viewer 
-$('.img').click(function(e){
-    var current = e.currentTarget;
+all_imgs.click(function(e){
+    current = e.currentTarget;
+    var i = all_imgs.index(current);
     alt = e.currentTarget.alt;
     $("#pop").html(current.outerHTML)
     viewer.removeClass('rm');
     $('body').css('overflow', 'hidden');
+    
+    $('#next').click(function(){
+        i = all_imgs.index(current);
+        current = all_imgs[i + 1]
+        alt = current.alt;
+        $("#pop").html(current.outerHTML)
+        $('.info_text').empty();
+        $('.info_text').addClass('rm');
+        console.log(i)
+    }) 
+    
+    console.log(i)
 })
 
     // click info button
@@ -33,20 +47,19 @@ $("#info").click(function(e){
     }
 });
 
+    // next & prev button 
+
+
     // change banner 
 function ch_banner(){
     var bg = $('.bg img');
     var imgs = $('.c4 img, .c3 img');
-    ran = Math.round(Math.random()*imgs.length);
-    console.log(ran);
+    ran = Math.round(Math.random()*(imgs.length-1));
     ran_img = imgs[ran].attributes[0].nodeValue;
     bg.attr('src', ran_img);
 }
 
 setInterval(ch_banner, 5000);
-
-    // next & prev button 
-
 
 
 
@@ -59,8 +72,7 @@ To adjust viewer size according to the screen size
 - To add contact
 - To write img alt
 - To change banner everytime the website loads
-To style the scroll bar
-To scroll horizontally with mouse drag move
+responsive
 To add next and previous button
 add animation to pop-up
 To change jasmin to jasmine
