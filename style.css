@@ -1,16 +1,13 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 h1,h2,p,li,ul:hover{
     cursor: default;
 }
-
-:root{
-    --c1 : #03090D;
-    --c2 : #0B1E26;
-    --c3 : #254A59;
-    --c4 : #3E768C;
+html{
+    width: 100vw;
 }
 body{
     width: 100vw;
@@ -39,7 +36,6 @@ body{
 .intro .bg img{
     user-select: none;
     width: 100%;
-    height: 100%;
     background-position: center;
     object-fit: cover;
     transition: 0.25s ease;
@@ -116,18 +112,18 @@ body{
     color: #000;
     text-decoration: none;
     text-align: center;
-    width: 100px;
+    width: 120px;
     display: block;
     margin: 0 auto;
     background: rgb(154, 204, 212);
     border-radius: 5px;
-    padding: 5px;
+    padding: 10px;
     margin-top: 30px;
     transition: 0.25s ease;
     user-select: none;
 }
 .intro a.resume:hover{
-    background: #000;
+    background: rgb(27, 35, 53);
     color: rgb(154, 204, 212);
 }
 
@@ -255,6 +251,7 @@ body{
 
 .contact{
     color: #fff;
+    background: #1a1a1a;
 }
 .contact h1{
     font-family: Arial, Helvetica, sans-serif;
@@ -287,6 +284,7 @@ body{
     /* footer */
 footer{
     font-family: Arial, Helvetica, sans-serif;
+    background: #1a1a1a;
     color: #999;
     text-align: center;
     padding: 25px 0;
@@ -374,3 +372,14 @@ footer{
     font-size: 1.2rem;
     user-select: none;
 }
+
+
+        /* Responsive  */
+
+@media only screen and (max-width: 630px) {
+
+.container .c .imgs .img {
+    width: 150px;
+    }
+}   
+
