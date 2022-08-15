@@ -61,12 +61,9 @@ function ch_banner(){
 
 }
 
-
 $('.bg img').ready(
     setInterval(ch_banner, 5000)
 )
-
-
 
 
 /*

@@ -156,7 +156,7 @@ body{
 
         /* container */
 .container{
-    width: 70%;
+    width: 100%;
     background: #fff;
     display: block;
 }
