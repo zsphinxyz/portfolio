@@ -1,4 +1,4 @@
-var viewer = $("#viewer")
+var viewer = $("#viewer");
 
     // cancel button function
 $("#cancel").click(function(){
@@ -20,7 +20,9 @@ all_imgs.click(function(e){
     $("#pop").html(current.outerHTML)
     viewer.removeClass('rm');
     $('body').css('overflow', 'hidden');
-    
+
+
+        // next & prev button     
     $('#next').click(function(){
         i = all_imgs.index(current);
         current = all_imgs[i + 1]
@@ -47,19 +49,22 @@ $("#info").click(function(e){
     }
 });
 
-    // next & prev button 
-
 
     // change banner 
 function ch_banner(){
-    var bg = $('.bg img');
+    var bg = $('.bg');
     var imgs = $('.c4 img, .c3 img');
     ran = Math.round(Math.random()*(imgs.length-1));
     ran_img = imgs[ran].attributes[0].nodeValue;
-    bg.attr('src', ran_img);
+    console.log(ran_img);
+    bg.css('background-image', 'url('+ran_img+')');
+
 }
 
-setInterval(ch_banner, 5000);
+
+$('.bg img').ready(
+    setInterval(ch_banner, 5000)
+)
 
 
 

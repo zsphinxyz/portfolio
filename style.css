@@ -12,22 +12,27 @@ html{
 body{
     width: 100vw;
     min-height: 2000px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     background: #03090D;
     scroll-behavior: smooth;
 }
 
 .intro {
     width: inherit;
-    height: 600px;
-    /* background: url("img/07.png") no-repeat center ; */
-    overflow: hidden;
+    height: 700px;
+    /* overflow: hidden; */
     display: block;
     margin: 0 auto;
 }
 .intro .bg{
-    width: inherit;
-    height: 100%;
+    width: 100%;
+    height: inherit;
+    background-image: url("img/07.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    filter: brightness(30%);
     position: absolute;
     z-index: -1;
     overflow: hidden;
@@ -44,7 +49,7 @@ body{
     position: relative;
 }
 
-.intro .bg::after{
+/* .intro .bg::after{
     content: '';
     width: inherit;
     height: inherit;
@@ -53,7 +58,7 @@ body{
     left: 0;
     top: 0;
     opacity: 0.75;
-}
+} */
 .portfolio{
     font-size: 32px;
     font-family: 'Times New Roman', Times, serif;
@@ -133,7 +138,7 @@ body{
 .social{
     /* background: #aaa; */
     width: 300px;
-    margin: 100px 0 0 10%;
+    margin: 50px 0 0px 10%;
 }
 .social a{
     text-decoration: none;
@@ -151,6 +156,7 @@ body{
 
         /* container */
 .container{
+    width: 70%;
     background: #fff;
     display: block;
 }
