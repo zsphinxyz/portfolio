@@ -301,23 +301,25 @@ footer{
     padding: 25px 0;
 }
 
-
     /* VIEWER section */
 
 #viewer{
     position: fixed;
+    display: grid;
+    align-content: center;
     width: 100vw;
     height: 100vh;
     left: 0;
     top: 0;
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(30, 30, 30, 0.75);
     z-index: 100;
     transition: 250ms ease-out;
 }
 
 .rm{
     transition: 250ms ease-out;
-    display: none;
+    /* display: none; */
+    visibility: hidden;
 }
 
 .v_img{
@@ -383,7 +385,6 @@ footer{
     font-size: 1.2rem;
     user-select: none;
 }
-
 
         /* Responsive  */
 
