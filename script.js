@@ -56,7 +56,6 @@ function ch_banner(){
     var imgs = $('.c4 img, .c3 img');
     ran = Math.round(Math.random()*(imgs.length-1));
     ran_img = imgs[ran].attributes[0].nodeValue;
-    console.log(ran_img);
     bg.css('background-image', 'url('+ran_img+')');
 
 }
