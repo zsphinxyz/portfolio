@@ -21,19 +21,22 @@ all_imgs.click(function(e){
     viewer.removeClass('rm');
     $('body').css('overflow', 'hidden');
 
+    console.log(current, i);
 
-        // next & prev button     
-    $('#next').click(function(){
-        i = all_imgs.index(current);
+
+        // next & prev button 
+        $('#next').click(function(){
         current = all_imgs[i + 1]
+
         alt = current.alt;
         $("#pop").html(current.outerHTML)
         $('.info_text').empty();
         $('.info_text').addClass('rm');
-        console.log(i)
+
+        console.log(current, i);
+  
     }) 
     
-    console.log(i)
 })
 
     // click info button
