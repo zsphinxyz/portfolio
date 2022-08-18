@@ -12,32 +12,62 @@ let all_imgs = $('.img')
 let current;
 let alt;
 
+function next_item_of_array(li, item){
+    current_item = li.index(item)
+    return(li[current_item + 1]);
+}
+
+function prev_item_of_array(li, item){
+    current_item = li.index(item)
+    return(li[current_item - 1]);
+}
+
     // click img pop up viewer 
 all_imgs.click(function(e){
     current = e.currentTarget;
-    var i = all_imgs.index(current);
     alt = e.currentTarget.alt;
     $("#pop").html(current.outerHTML)
     viewer.removeClass('rm');
     $('body').css('overflow', 'hidden');
 
-    console.log(current, i);
-
-
-        // next & prev button 
-        $('#next').click(function(){
-        current = all_imgs[i + 1]
-
-        alt = current.alt;
-        $("#pop").html(current.outerHTML)
-        $('.info_text').empty();
-        $('.info_text').addClass('rm');
-
-        console.log(current, i);
-  
-    }) 
-    
 })
+
+    // next button 
+$('#next').click(function(){
+    let next_item = next_item_of_array(all_imgs, current);
+
+    if( all_imgs.index(current) + 1 >= all_imgs.length ){
+        current = all_imgs[0];
+    }
+    else{
+        current = next_item;
+    }
+
+    $("#pop").html(current.outerHTML)
+    alt = current.alt;
+    $('.info_text').empty();
+    $('.info_text').addClass('rm');
+})
+
+    // prev button 
+$('#prev').click(function(){
+    let prev_item = prev_item_of_array(all_imgs, current);
+
+    if( all_imgs.index(current) <= 0 ){
+        current = all_imgs.last()[0];
+    }
+    else{
+        current = prev_item;
+    }
+
+    $("#pop").html(current.outerHTML)
+    alt = current.alt;
+    $('.info_text').empty();
+    $('.info_text').addClass('rm');
+})
+
+
+
 
     // click info button
 $("#info").click(function(e){
