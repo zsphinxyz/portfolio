@@ -420,8 +420,8 @@ footer{
 .container .c .imgs .img {
     width: 150px;
 }
-.contact ul{
-    justify-content: space-between;
+.container .a .caption{
+    font-size: 14px;
 }
 
 
