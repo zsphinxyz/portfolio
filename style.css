@@ -7,9 +7,6 @@
 h1,h2,p,li,ul:hover{
     cursor: default;
 }
-html{
-    width: 100vw;
-}
 body{
     width: 100vw;
     min-height: 2000px;
@@ -50,16 +47,6 @@ body{
     position: relative;
 }
 
-/* .intro .bg::after{
-    content: '';
-    width: inherit;
-    height: inherit;
-    background: #000;
-    position: absolute;
-    left: 0;
-    top: 0;
-    opacity: 0.75;
-} */
 .portfolio{
     font-size: 32px;
     font-family: 'Times New Roman', Times, serif;
@@ -316,20 +303,26 @@ footer{
     top: 0;
     background: rgba(30, 30, 30, 0.75);
     z-index: 100;
-    transition: 250ms ease-out;
+    transition: all 250ms ease-out;
 }
 
 .rm{
-    transition: 250ms ease-out;
+    transition: all 250ms ease-out;
     visibility: hidden;
 }
 
 .v_img{
     display: block;
     margin: 30px auto;
-    /* background: gray; */
-    width: 50%;
+    background: #fff;
+    width: 40%;
+    padding: 3px;
     position: relative;
+    box-shadow: 0 0 10px 1px #000;
+    transition: all 0.2s ease;
+}
+.v_img:hover{
+    box-shadow: 0 5px 20px 1px #000;
 }
 
 #cancel, #info, #next, #prev{
@@ -374,7 +367,7 @@ footer{
     transform: translateX(22px);
 }
 #prev{
-    transform: rotate(180deg) translateX(30px);
+    transform: rotate(180deg) translateX(28px);
 }
 
 .viewer svg{
@@ -417,13 +410,83 @@ footer{
 
 @media only screen and (max-width: 630px) {
 
+    /* intro  */
+.intro{
+    height: 500px;
+}
+.intro .portfolio{
+    font-size: 22px;
+    padding-left: 5%;
+}
+.intro h1{
+    font-size: 42px;
+}
+.intro .zsphinx{
+    font-size: 14px;
+    width: 80px;
+    text-align: center;
+    padding-left: 20px;
+    /* background: #f00; */
+}
+.intro .zsphinx::before, .intro .zsphinx::after{
+    width: 120px;
+    right: 70px;
+}
+.intro .zsphinx::before{
+    left: 90px;
+} 
+.pro li{
+    font-size: 28px;
+}
+.social{
+    margin: 20px 0 0 5%;
+}
+    /* container  */
+.container .title{
+    font-size: 25px;
+}
+
 .container .c .imgs .img {
     width: 150px;
 }
 .container .a .caption{
     font-size: 14px;
 }
+.v_img{
+    width: 60%;
+}
 
+    /*  softwares */
+.c5 .info h2{
+    font-size: 18px;
+    padding-left: 10px;
+}
+.c5 .info ul{
+    padding: 0 10px;
+}
+.c5 .info ul li{
+    font-size: 14px;
+    line-height: 20px;;
+}
+.c5 .info ul span{
+    font-size: 8px;
+}
 
+    /* contact  */
+
+.contact h1{
+    font-size: 18px;
+}
+.contact ul{
+    padding-left: 20px;
+    display: inline-block;
+}
+.contact ul li a{
+    font-size: 14px;
+}
+
+footer p{
+    font-size: 12px;
+}
 }   
 

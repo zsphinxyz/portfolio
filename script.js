@@ -1,6 +1,6 @@
 var viewer = $("#viewer");
 
-    // cancel button function
+    // cancel button
 $("#cancel").click(function(){
     viewer.addClass('rm');
     $('body').css('overflow', 'scroll');
@@ -67,11 +67,8 @@ $('#prev').click(function(){
 })
 
 
-
-
     // click info button
 $("#info").click(function(e){
-    console.log('clicked')
     if ($('.info_text').hasClass('rm')){ 
         $('.info_text').html(alt);
         $('.info_text').removeClass('rm');
@@ -90,12 +87,18 @@ function ch_banner(){
     ran = Math.round(Math.random()*(imgs.length-1));
     ran_img = imgs[ran].attributes[0].nodeValue;
     bg.css('background-image', 'url('+ran_img+')');
-
 }
 
-$('.bg img').ready(
+$('.intro .bg').ready(
     setInterval(ch_banner, 5000)
 )
+
+    // width of the viewer imgs
+
+var w = window.innerWidth;
+var h = window.innerHeight;
+
+console.log(w, h);
 
 
 /*
@@ -106,11 +109,11 @@ To adjust viewer size according to the screen size
 - To add contact
 - To write img alt
 - To change banner everytime the website loads
-responsive
-To add next and previous button
+- responsive
+- To add next and previous button
 add animation to pop-up
-To change jasmin to jasmine
-To draw logos for logo designs section
-To check spelling
+- To change jasmin to jasmine
+- To draw logos for logo designs section
+- To check spelling
 Maybe to add a mail box to send some text from client
 */
