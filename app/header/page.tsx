@@ -68,7 +68,7 @@ const Header = () => {
 
             </div>
 
-            <button className="hidden lg:block bg-blue-600 text-white px-6 py-1 rounded-md hover:bg-blue-800 transition">Book Appointment</button>
+            <button className="hidden lg:block bg-blue-600 text-white px-6 py-1 rounded-md hover:bg-blue-800 transition outline-none">Book Appointment</button>
         </div>
     )
 }
